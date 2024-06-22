@@ -3,30 +3,31 @@
 This project is designed to develop a platform to enable a sales team to quickly quote a customer based on their current usage and needs. It includes functionality to handle various discounts for specific customers and uses TypeScript for type safety and Jest for testing. And special customer can be added or removed as needed.
 
 ## Project Structure
+```json
 customer-quote-nodejs/
 ├── src/
-│   ├── discounts/
-│   │   ├── AddOnHalfPrice.ts
-│   │   ├── BasicAdFixedPrice.ts
-│   │   ├── StandardAdHalfPrice.ts
-│   │   ├── StandardAdTwoForOne.ts
-│   │   └── index.ts
-│   ├── manager/
-│   │   └── SpecialCustomerDiscountManager.ts
-│   ├── models/
-│   │   ├── Checkout.ts
-│   │   └── index.ts
-│   ├── types/
-│   │   └── index.ts
-│   └── index.ts
+│ ├── discounts/
+│ │ ├── AddOnHalfPrice.ts
+│ │ ├── BasicAdFixedPrice.ts
+│ │ ├── StandardAdHalfPrice.ts
+│ │ ├── StandardAdTwoForOne.ts
+│ │ └── index.ts
+│ ├── manager/
+│ │ └── SpecialCustomerDiscountManager.ts
+│ ├── models/
+│ │ ├── Checkout.ts
+│ │ └── index.ts
+│ ├── types/
+│ │ └── index.ts
+│ └── index.ts
 ├── test/
-│   └── Checkout.test.ts
+│ └── Checkout.test.ts
 ├── tsconfig.json
 ├── jest.config.js
 ├── package.json
 ├── .babelrc
 └── node_modules/
-
+```
 ## Prerequisites
 - Node.js (>=14.x)
 - npm (>=6.x)
