@@ -11,7 +11,7 @@ export default class SpecialCustomerDiscountManager {
   }
 
   deleteSpecialCustomer(customer: string) {
-    if (!this.customerDiscounts.has(customer)) {
+    if (this.customerDiscounts.has(customer)) {
       this.customerDiscounts.delete(customer);
     }
   }
