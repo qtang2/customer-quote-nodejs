@@ -3,7 +3,7 @@
 This project is designed to develop a platform to enable a sales team to quickly quote a customer based on their current usage and needs. It includes functionality to handle various discounts for specific customers and uses TypeScript for type safety and Jest for testing. And special customer can be added or removed as needed.
 
 ## Project Structure
-```json
+```js
 customer-quote-nodejs/
 ├── src/
 │ ├── discounts/
@@ -35,8 +35,8 @@ customer-quote-nodejs/
 ## Setup
 1. Clone the repository:
 ```sh
-   git clone <repository-url>
-   cd my-node-project
+   git clone git@github.com:qtang2/customer-quote-nodejs.git
+   cd customer-quote-nodejs
 ```
 2.	Install dependencies:
 ```sh
