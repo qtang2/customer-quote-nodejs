@@ -9,15 +9,15 @@ import { ItemType, PricingRule } from "./types/index";
 console.log("====================================");
 console.log("Customer Quote");
 console.log("====================================");
-
-const defaultPricingRules: PricingRule[] = [];
+// the defaultPricingRules SHOULD NOT include same customer
+const defaultPricingRules: PricingRule[] = [
+  new StandardHalfPrice(['Onepass']) 
+];
 const specialCustomerDiscountManager = new SpecialCustomerDiscountManager();
 specialCustomerDiscountManager.addSpecialCustomer('Nandos', new StandardAdTwoForOne(['Nandos']));
 specialCustomerDiscountManager.addSpecialCustomer('Catch', new AddOnHalfPrice(['Catch']));
-specialCustomerDiscountManager.addSpecialCustomer('Onepass', new StandardHalfPrice(['Onepass']));
 specialCustomerDiscountManager.addSpecialCustomer('Onepass', new BasicFixedPrice(['Onepass']));
 specialCustomerDiscountManager.addSpecialCustomer('NikeWithDiscount', new BasicFixedPrice(['NikeWithDiscount']));
-// specialCustomerDiscountManager.deleteSpecialCustomer('NikeWithDiscount')
 const testScenarios = [
   {
     customer: "Nike",

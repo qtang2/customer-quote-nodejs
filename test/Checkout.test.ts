@@ -13,7 +13,7 @@ describe("Checkout", () => {
   let defaultPricingRules: PricingRule[];
 
   beforeEach(() => {
-    defaultPricingRules = [];
+    defaultPricingRules = [new BasicFixedPrice(['NikeWithDiscount'])];
 
     specialCustomerDiscountManager = new SpecialCustomerDiscountManager();
     specialCustomerDiscountManager.addSpecialCustomer(
@@ -90,5 +90,18 @@ describe("Checkout", () => {
 
     const total = checkout.total();
     expect(total).toBe(1800)
+  });
+  it("should apply NikeWithDiscount fixed price on basic ads", () => {
+    const checkout = new Checkout(
+      defaultPricingRules,
+      specialCustomerDiscountManager,
+      "NikeWithDiscount"
+    );
+    checkout.add(ItemType.Basic);
+    checkout.add(ItemType.Standard);
+    checkout.add(ItemType.AddOnCopyWriting);
+
+    const total = checkout.total();
+    expect(total).toBe(1750)
   });
 });
