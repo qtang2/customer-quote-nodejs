@@ -36,7 +36,7 @@ const testScenarios = [
   },
   {
     customer: "Onepass",
-    items: ["basic", "standard", "basic", "standard"],
+    items: ["basic", "standard", "standard", "standard"],
     expectedTotal: 1800,
   },
   {

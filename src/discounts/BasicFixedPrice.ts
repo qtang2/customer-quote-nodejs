@@ -15,8 +15,8 @@ export default class BasicFixedPrice implements PricingRule {
     if (this.specialCustomers.has(customer)) {
       const fixedPrice = items
         .filter((item) => item === ItemType.Basic)
-        .reduce(() => {
-          return PREDEFINED_FULL_PRICES.basic - BASIC_AD_DISCOUNT_PRICE;
+        .reduce((acc, _) => {
+          return acc + (PREDEFINED_FULL_PRICES.basic - BASIC_AD_DISCOUNT_PRICE);
         }, 0);
       return fixedPrice;
     }

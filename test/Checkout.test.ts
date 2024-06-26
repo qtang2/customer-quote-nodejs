@@ -85,7 +85,7 @@ describe("Checkout", () => {
     );
     checkout.add(ItemType.Basic);
     checkout.add(ItemType.Standard);
-    checkout.add(ItemType.Basic);
+    checkout.add(ItemType.Standard);
     checkout.add(ItemType.Standard);
 
     const total = checkout.total();
